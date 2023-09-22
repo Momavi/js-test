@@ -1,0 +1,43 @@
+@mixin text-template {
+  font-family: "Montserrat";
+  font-style: normal;
+}
+
+@mixin text-styles($weight, $size, $line-height, $color) {
+  @include text-template;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin text-logo {
+  @include text-styles(700, 32px, 39px, $colorLogo);
+}
+
+@mixin text-600-16px {
+  @include text-styles(600, 16px, 22px, $colorText);
+}
+
+@mixin text-600-14px {
+  @include text-styles(600, 14px, 17px, $colorText);
+}
+
+@mixin text-400-16px {
+  @include text-styles(400, 16px, 22px, $colorText);
+}
+
+@mixin text-400-14px {
+  @include text-styles(400, 14px, 17px, $colorSubText);
+}
+
+@mixin active {
+  border-color: rgb(243, 5, 53);
+  outline: none;
+  transition: all 0.3s;
+}
+
+@mixin hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
