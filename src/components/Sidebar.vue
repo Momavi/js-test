@@ -1,6 +1,7 @@
 <template>
   <div class="sidebar">
     <span class="sidebar-text">Поиск сотрудников</span>
+    <SidebarInput />
     <span class="sidebar-text">Результаты</span>
     <Preloader v-if="isLoading" />
     <SidebarItem v-else-if="isEmployees" />
@@ -11,6 +12,7 @@
 
 <script setup>
 import SidebarItem from "@/components/SidebarItem.vue";
+import SidebarInput from "@/components/SidebarInput.vue";
 import Preloader from "@/components/Preloader.vue";
 import { useStore } from "vuex";
 import { computed } from "vue";
